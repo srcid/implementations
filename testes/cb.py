@@ -48,7 +48,7 @@ def main():
     for solver_str in ["CPLEX", "GUROBI", "SCIP", "CBC"]:
       for instance in dataset_path.glob("*.dat"):
         with instance.open('r') as file:
-          print(f'{solver_str} running {dataset_path.name}')
+          print(f'{solver_str} running {instance.name}')
 
           lines = file.readlines()
           S1 = lines[4].strip()
